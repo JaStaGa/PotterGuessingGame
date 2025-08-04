@@ -13,6 +13,7 @@ body {
 }
 
 .main-game {
+  margin: 0;
   text-align: center;
   font-family: 'Marauders Map', serif;
   color: #4b2e2e;
@@ -62,13 +63,13 @@ p {
 
 /*hover effect */
 .marauders-container {
-  min-height: 100vh;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
+  flex-direction: column;    /* stack title + button top→bottom */
+  justify-content: center;   /* vertical centering */
+  align-items: center;       /* horizontal centering */
+  min-height: 100vh;         /* full viewport height */
+  width: 100%;               /* avoid forcing horizontal scroll */
+  padding: 1rem;             /* optional breathing room */
 }
 
 /* When hovered, unblur content */
