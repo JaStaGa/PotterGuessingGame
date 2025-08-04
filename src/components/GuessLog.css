@@ -19,15 +19,33 @@
   background-color: #8B5E3C;
 }
 
-/* Mobile: allow horizontal scroll on the guess-log */
-@media only screen and (max-width: 600px) {
-  .guess-log-wrapper {
-    overflow-x: auto;
-    margin: 1rem 0;
-  }
+/* GuessLog.css */
 
+/* 1) Always wrap the table for overflow and centering */
+.guess-log-wrapper {
+  width: 100%;
+  /* fill available width */
+  overflow-x: auto;
+  /* scroll if too wide */
+  margin: 1rem auto;
+  /* center the wrapper */
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 2) Keep the table itself centered inside that wrapper */
+.guess-log-wrapper table {
+  width: auto;
+  /* size to content */
+  margin: 0 auto;
+  /* center horizontally */
+  border-collapse: collapse;
+}
+
+/* 3) On narrow screens, stop forcing a min-width */
+@media only screen and (max-width: 600px) {
   .guess-log-wrapper table {
-    min-width: 480px;
-    /* ensure the table can scroll */
+    /* remove any fixed minimum, let it flex or scroll */
+    min-width: auto;
   }
 }

@@ -13,7 +13,6 @@ body {
 }
 
 .main-game {
-  margin-top: 50%;
   text-align: center;
   font-family: 'Marauders Map', serif;
   color: #4b2e2e;
@@ -23,7 +22,7 @@ body {
 
 .main-game h1 {
   font-size: 50%;
-  margin-bottom: 30%;
+  margin-bottom: 1rem;
 }
 
 
@@ -63,8 +62,8 @@ p {
 
 /*hover effect */
 .marauders-container {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,35 +81,24 @@ p {
 
 /* Mobile adjustments */
 @media only screen and (max-width: 600px) {
-
-  /* Let the container shrink/scroll instead of forcing 100vh/100vw */
   .marauders-container {
-    min-height: auto;
-    /* allow natural height when URL bar hides */
-    height: auto;
-    padding: 1rem 0.5rem;
-    /* tighter padding at top/bottom, sides */
+    padding: 1rem;
+    /* give breathing room top/bottom */
   }
 
-  /* Center the startup title & button better on small screens */
-  .start-title {
-    font-size: 1.5rem;
-    /* bump font size down a bit */
-    margin-bottom: 1rem;
+  .main-game {
+    margin: 0;
+    /* override any leftover offsets */
+  }
+
+  .main-game h1 {
+    font-size: 2rem;
+    /* scale down the title */
+    margin-bottom: 0.75rem;
   }
 
   .play-button {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
-  }
-
-  /* On the game screen, shrink inputs & buttons for mobile */
-  .game-screen input,
-  .game-screen button {
-    width: 100%;
-    /* full-width on phones */
-    max-width: 300px;
-    /* but don’t grow forever */
-    margin: 0.5rem 0;
   }
 }

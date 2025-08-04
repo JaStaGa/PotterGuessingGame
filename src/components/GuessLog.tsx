@@ -13,7 +13,8 @@ interface Props {
 const GuessLog: React.FC<Props> = ({ targetCharacter, characters, attempts }) => {
 
   return (
-    <Wrapper>
+    // Apply both the background styling and the scroll-wrapper
+    <div className="guess-log-wrapper guess-log">
       <Table>
         <thead>
           <tr>
@@ -71,17 +72,17 @@ const GuessLog: React.FC<Props> = ({ targetCharacter, characters, attempts }) =>
           })}
         </tbody>
       </Table>
-    </Wrapper>
+    </div>
   );
 };
 
 export default GuessLog;
 
 // STYLES
-const Wrapper = styled.div`
-  color: white;
-  padding: 20px;
-`;
+// const Wrapper = styled.div`
+//   color: white;
+//   padding: 20px;
+// `;
 
 const Table = styled.table`
   width: 100%;
