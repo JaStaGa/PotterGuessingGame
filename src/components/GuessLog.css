@@ -36,10 +36,7 @@
 /* 2) Keep the table itself centered inside that wrapper */
 .guess-log-wrapper table {
   width: 100%;
-  /* size to content */
-  margin: 0 auto;
-  /* center horizontally */
-  border-collapse: collapse;
+  table-layout: fixed;
 }
 
 /* 3) On narrow screens, stop forcing a min-width */

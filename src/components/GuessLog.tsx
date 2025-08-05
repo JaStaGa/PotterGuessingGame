@@ -93,6 +93,7 @@ const Table = styled.table`
     padding: 8px 10px;
     border: 1px solid #444;
     text-align: center;
+    white-space: normal;
   }
 
   th {
@@ -102,7 +103,7 @@ const Table = styled.table`
   @media (max-width: 600px) {
     th, td {
       font-size: 0.65rem;
-      padding: 6px 8px;
+      padding: 2px 4px;
     }
   }
 `;
