@@ -21,12 +21,12 @@ const GuessLog: React.FC<Props> = ({ targetCharacter, characters, attempts }) =>
           <th style={{ color: 'white', backgroundColor: '#222' }}>Name</th>
 
 
-            <th>House</th>
-            <th>Gender</th>
-            <th>Year</th>
-            <th>Hair</th>
-            <th>Ancestry</th>
-            <th>Status</th>
+            <th style={{ color: 'white', backgroundColor: '#222' }}>House</th>
+            <th style={{ color: 'white', backgroundColor: '#222' }}>Gender</th>
+            <th style={{ color: 'white', backgroundColor: '#222' }}>Year</th>
+            <th style={{ color: 'white', backgroundColor: '#222' }}>Hair</th>
+            <th style={{ color: 'white', backgroundColor: '#222' }}>Ancestry</th>
+            <th style={{ color: 'white', backgroundColor: '#222' }}>Status</th>
 
           </tr>
         </thead>

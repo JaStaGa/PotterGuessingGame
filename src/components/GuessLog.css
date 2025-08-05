@@ -43,9 +43,12 @@
 }
 
 /* 3) On narrow screens, stop forcing a min-width */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .guess-log-wrapper table {
     /* remove any fixed minimum, let it flex or scroll */
     min-width: auto;
+  }
+  th {
+    font-size: 70%;
   }
 }
