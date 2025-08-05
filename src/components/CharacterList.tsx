@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: #fdfaf4;
     color: #4b2e2e;
     font-family: 'Marauders Map', serif;
     -webkit-font-smoothing: antialiased;
@@ -44,8 +43,8 @@ const Grid = styled.div`
 `
 
 const Card = styled.div`
-  background: #fffaf0;
-  border: 2px solid #d2b48c;
+  background: #d3ba93;
+  border: 2px solid #4b2e2e;
   border-radius: 12px;
   overflow: hidden;
   display: flex;

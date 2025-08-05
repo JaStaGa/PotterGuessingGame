@@ -102,7 +102,6 @@ p {
   /* horizontal centering */
   min-height: 75vh;
   /* min-height: 100vh;         full viewport height */
-  width: 100%;
   /* avoid forcing horizontal scroll */
   padding: 1rem;
   /* optional breathing room */
@@ -122,7 +121,7 @@ p {
   /* top-align image + text */
   gap: 1rem;
   /* space between image and info */
-  background-color: rgba(255, 248, 220, 0.8);
+  background-color: #d3ba93;
   border: 1px solid #a47148;
   border-radius: 8px;
   padding: 1rem;
