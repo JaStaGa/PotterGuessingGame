@@ -52,5 +52,6 @@
     /* remove any fixed minimum, let it flex or scroll */
     width: auto;
     min-width: auto;
+    align-self: center;
   }
 }
