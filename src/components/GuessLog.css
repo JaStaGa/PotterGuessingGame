@@ -50,7 +50,7 @@
   }
   .guess-log-wrapper table {
     /* remove any fixed minimum, let it flex or scroll */
-    width: 90%;
+    width: auto;
     min-width: auto;
   }
 }
