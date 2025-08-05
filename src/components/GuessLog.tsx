@@ -14,65 +14,63 @@ const GuessLog: React.FC<Props> = ({ targetCharacter, characters, attempts }) =>
 
   return (
     // Apply both the background styling and the scroll-wrapper
-    <div className="guess-log-wrapper guess-log">
-      <Table>
-        <thead>
-          <tr>
+    <Table>
+      <thead>
+        <tr>
           <th style={{ color: 'white', backgroundColor: '#222' }}>Name</th>
 
 
-            <th style={{ color: 'white', backgroundColor: '#222' }}>House</th>
-            <th style={{ color: 'white', backgroundColor: '#222' }}>Gender</th>
-            <th style={{ color: 'white', backgroundColor: '#222' }}>Year</th>
-            <th style={{ color: 'white', backgroundColor: '#222' }}>Hair</th>
-            <th style={{ color: 'white', backgroundColor: '#222' }}>Ancestry</th>
-            <th style={{ color: 'white', backgroundColor: '#222' }}>Status</th>
+          <th style={{ color: 'white', backgroundColor: '#222' }}>House</th>
+          <th style={{ color: 'white', backgroundColor: '#222' }}>Gender</th>
+          <th style={{ color: 'white', backgroundColor: '#222' }}>Year</th>
+          <th style={{ color: 'white', backgroundColor: '#222' }}>Hair</th>
+          <th style={{ color: 'white', backgroundColor: '#222' }}>Ancestry</th>
+          <th style={{ color: 'white', backgroundColor: '#222' }}>Status</th>
 
-          </tr>
-        </thead>
-        <tbody>
-          {attempts.map((attemptName, idx) => {
-            const guessedChar = characters.find(
-              c => c.name.toLowerCase() === attemptName.toLowerCase()
-            );
+        </tr>
+      </thead>
+      <tbody>
+        {attempts.map((attemptName, idx) => {
+          const guessedChar = characters.find(
+            c => c.name.toLowerCase() === attemptName.toLowerCase()
+          );
 
-            return (
-              <tr key={idx}>
-                {/* <td>{attemptName}</td> */}
-                <HintCell isMatch={guessedChar?.name.toLowerCase() === targetCharacter.name.toLowerCase()}>
-                  {guessedChar?.name || '—'}
-                </HintCell>
-                <HintCell isMatch={guessedChar?.house === targetCharacter.house}>
-                  {guessedChar?.house || '—'}
-                </HintCell>
-                <HintCell isMatch={guessedChar?.gender === targetCharacter.gender}>
-                  {guessedChar?.gender || '—'}
-                </HintCell>
-                {/* Up or Down arrow for birth year */}
-                <HintCell isMatch={guessedChar?.yearOfBirth === targetCharacter.yearOfBirth}>
-                  {guessedChar?.yearOfBirth
-                    ? guessedChar.yearOfBirth === targetCharacter.yearOfBirth
-                      ? guessedChar.yearOfBirth
-                      : `${guessedChar.yearOfBirth} ${guessedChar.yearOfBirth > targetCharacter.yearOfBirth ? '↓' : '↑'
-                      }`
-                    : '—'}
-                </HintCell>
-                <HintCell isMatch={guessedChar?.hairColour === targetCharacter.hairColour}>
-                  {guessedChar?.hairColour || '—'}
-                </HintCell>
-                <HintCell isMatch={guessedChar?.ancestry === targetCharacter.ancestry}>
-                  {guessedChar?.ancestry || '—'}
-                </HintCell>
-                <HintCell isMatch={guessedChar?.alive === targetCharacter.alive}>
-                  {guessedChar?.alive ? 'Alive' : 'Deceased'}
-                </HintCell>
+          return (
+            <tr key={idx}>
+              {/* <td>{attemptName}</td> */}
+              <HintCell isMatch={guessedChar?.name.toLowerCase() === targetCharacter.name.toLowerCase()}>
+                {guessedChar?.name || '—'}
+              </HintCell>
+              <HintCell isMatch={guessedChar?.house === targetCharacter.house}>
+                {guessedChar?.house || '—'}
+              </HintCell>
+              <HintCell isMatch={guessedChar?.gender === targetCharacter.gender}>
+                {guessedChar?.gender || '—'}
+              </HintCell>
+              {/* Up or Down arrow for birth year */}
+              <HintCell isMatch={guessedChar?.yearOfBirth === targetCharacter.yearOfBirth}>
+                {guessedChar?.yearOfBirth
+                  ? guessedChar.yearOfBirth === targetCharacter.yearOfBirth
+                    ? guessedChar.yearOfBirth
+                    : `${guessedChar.yearOfBirth} ${guessedChar.yearOfBirth > targetCharacter.yearOfBirth ? '↓' : '↑'
+                    }`
+                  : '—'}
+              </HintCell>
+              <HintCell isMatch={guessedChar?.hairColour === targetCharacter.hairColour}>
+                {guessedChar?.hairColour || '—'}
+              </HintCell>
+              <HintCell isMatch={guessedChar?.ancestry === targetCharacter.ancestry}>
+                {guessedChar?.ancestry || '—'}
+              </HintCell>
+              <HintCell isMatch={guessedChar?.alive === targetCharacter.alive}>
+                {guessedChar?.alive ? 'Alive' : 'Deceased'}
+              </HintCell>
 
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
-    </div>
+            </tr>
+          );
+        })}
+      </tbody>
+    </Table>
   );
 };
 
