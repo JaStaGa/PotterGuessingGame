@@ -24,6 +24,7 @@
 /* 1) Always wrap the table for overflow and centering */
 .guess-log-wrapper {
   width: 100%;
+  max-width: 750px;
   align-self: center;
   overflow-x: auto;
   overflow-y: hidden;

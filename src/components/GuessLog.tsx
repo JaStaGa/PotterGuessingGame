@@ -86,11 +86,11 @@ export default GuessLog;
 
 const Table = styled.table`
   width: 100%;
-  margin-top: 20px;
+  margin: 0.5rem auto;
   border-collapse: collapse;
 
   th, td {
-    padding: 8px 10px;
+    padding: 16px 10px;
     border: 1px solid #444;
     text-align: center;
     white-space: normal;
