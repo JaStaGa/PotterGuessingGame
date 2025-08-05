@@ -38,15 +38,15 @@ const ScreenMainGame: React.FC<GameScreenProps> = ({
 
         {result === 'win' && target && (
             <h2>
-                🎉 You win! The character was {target.name}.{' '}
-                <button onClick={onRestart}>Play again</button>
+                You win! The character was {target.name}.{' '}
+                <p><button className='play-button' onClick={onRestart}>Play again</button></p>
             </h2>
         )}
 
         {result === 'lose' && target && (
             <h2>
-                😢 You lost. The correct answer was {target.name}.{' '}
-                <button onClick={onRestart}>Try again</button>
+                You lost. The correct answer was {target.name}.{' '}
+                <p><button className='play-button' onClick={onRestart}>Try again</button></p>
             </h2>
         )}
 

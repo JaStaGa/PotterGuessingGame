@@ -98,6 +98,13 @@ const Table = styled.table`
   th {
     background-color: #222;
   }
+
+  @media (max-width: 600px) {
+    th, td {
+      font-size: 0.65rem;
+      padding: 6px 8px;
+    }
+  }
 `;
 
 //styles each cell depending if match

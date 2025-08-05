@@ -7,8 +7,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Harry P Font';
+  src: url('./HarryP-MVZ6w.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'Marauders Map', serif;
+  color: #4b2e2e;
+}
+
+.start-title {
+  font-family: 'Harry P Font', serif;
+  font-size: 400%;
+  text-align: center;
+  margin-bottom: 20px;
   color: #4b2e2e;
 }
 
@@ -42,8 +57,14 @@ h1 {
   color: #4b2e2e;
 }
 
+h2 {
+  font-size: 200%;
+  margin-bottom: 15px;
+  color: #4b2e2e;
+}
+
 p {
-  font-size: 150%;
+  font-size: 1rem;
   margin-bottom: 20px;
   color: #4b2e2e;
 }
@@ -52,7 +73,8 @@ p {
 
 .play-button {
   padding: 12px 24px;
-  font-size: 30%;
+  font-size: 100%;
+  font-family: 'Marauders Map', serif;
   background-color: #8B5E3C;
   color: white;
   border: none;
@@ -64,12 +86,18 @@ p {
 /*hover effect */
 .marauders-container {
   display: flex;
-  flex-direction: column;    /* stack title + button top→bottom */
-  justify-content: center;   /* vertical centering */
-  align-items: center;       /* horizontal centering */
-  min-height: 100vh;         /* full viewport height */
-  width: 100%;               /* avoid forcing horizontal scroll */
-  padding: 1rem;             /* optional breathing room */
+  flex-direction: column;
+  /* stack title + button top→bottom */
+  justify-content: center;
+  /* vertical centering */
+  align-items: center;
+  /* horizontal centering */
+  min-height: 75vh;
+  /* min-height: 100vh;         full viewport height */
+  width: 100%;
+  /* avoid forcing horizontal scroll */
+  padding: 1rem;
+  /* optional breathing room */
 }
 
 /* When hovered, unblur content */
@@ -80,11 +108,68 @@ p {
   pointer-events: auto;
 }
 
+.character-reveal-box {
+  display: flex;
+  align-items: flex-start;
+  /* top-align image + text */
+  gap: 1rem;
+  /* space between image and info */
+  background-color: rgba(255, 248, 220, 0.8);
+  border: 1px solid #a47148;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem auto;
+  /* center on page */
+  max-width: 600px;
+  /* don’t stretch too wide */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Marauders Map', serif;
+  color: #4b2e2e;
+}
+
+.character-image {
+  flex-shrink: 0;
+  /* image never shrinks smaller */
+  width: 150px;
+  /* fixed width */
+  height: 200px;
+  /* fixed height */
+  object-fit: cover;
+  /* crop/scale to fill */
+  border-radius: 4px;
+  background: #eee;
+  /* placeholder bg if image missing */
+}
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* center text vertically next to image */
+  flex: 1;
+  /* take remaining space */
+}
+
+.character-info h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.character-info p {
+  margin: 0.25rem 0;
+  line-height: 1.4;
+}
+
 /* Mobile adjustments */
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .marauders-container {
     padding: 1rem;
     /* give breathing room top/bottom */
+  }
+
+  .start-title {
+    font-size: 3.0rem;
+    margin-bottom: 1rem;
   }
 
   .main-game {
@@ -92,7 +177,7 @@ p {
     /* override any leftover offsets */
   }
 
-  .main-game h1 {
+  .marauders-container h1 {
     font-size: 2rem;
     /* scale down the title */
     margin-bottom: 0.75rem;
@@ -101,5 +186,13 @@ p {
   .play-button {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
+  }
+
+  h2 {
+    font-size: 110%;
+  }
+
+  p {
+    font-size: 80%;
   }
 }

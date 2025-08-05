@@ -40,7 +40,7 @@ const InputBox: React.FC<InputBoxProps> = ({ onSubmitGuess, disabled, characterN
                     <option key={idx} value={name} />
                 ))}
             </datalist>
-            <button type="submit" disabled={disabled} style={{ padding: '10px 15px', marginLeft: '10px' }}>
+            <button className='play-button' type="submit" disabled={disabled} style={{ padding: '10px 15px', marginLeft: '10px' }}>
                 Submit
             </button>
         </form>
