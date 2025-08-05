@@ -24,10 +24,11 @@
 /* 1) Always wrap the table for overflow and centering */
 .guess-log-wrapper {
   width: 100%;
-  max-width: 100%;
+  /* fill available width */
+  overflow-x: auto;
+  overflow-y: hidden;
   /* scroll if too wide */
-  margin: 1rem auto;
-  overflow: hidden;
+  margin: 0 auto;
   /* center the wrapper */
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
@@ -37,6 +38,7 @@
 .guess-log-wrapper table {
   width: 100%;
   table-layout: fixed;
+  scroll-snap-align: center;
 }
 
 /* 3) On narrow screens, stop forcing a min-width */
@@ -47,7 +49,7 @@
   }
   .guess-log-wrapper table {
     /* remove any fixed minimum, let it flex or scroll */
-    width: auto;
+    width: 100%;
     min-width: auto;
     align-self: center;
   }
