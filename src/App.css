@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -39,4 +39,17 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/*creating a black and white silhouette*/
+.silhouette-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.silhouette {
+  filter: grayscale(0%) blur(10px);
+  display: block;
+  margin: 20px auto;
+  max-width: 200px;
 }
